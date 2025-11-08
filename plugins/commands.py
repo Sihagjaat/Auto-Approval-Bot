@@ -16,14 +16,14 @@ async def start_message(c,m):
     if not await db.is_user_exist(m.from_user.id):
         await db.add_user(m.from_user.id, m.from_user.first_name)
         await c.send_message(LOG_CHANNEL, LOG_TEXT.format(m.from_user.id, m.from_user.mention))
-    await m.reply_photo(f"https://te.legra.ph/file/119729ea3cdce4fefb6a1.jpg",
+    await m.reply_photo(f"https://graph.org/file/4ce6cded7cd6d5301ffd9-5a7d94d4131a60af35.jpg",
         caption=f"<b>Hello {m.from_user.mention} 👋\n\nI Am Join Request Acceptor Bot. I Can Accept All Old Pending Join Request.\n\nFor All Pending Join Request Use - /accept</b>",
         reply_markup=InlineKeyboardMarkup(
             [[
-                InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@TechShreyansh')
+                InlineKeyboardButton('🍻 Aᴅᴅ Tᴏ Cʜᴀᴛ 🍻', url='https://t.me/Mazhavil_approver_bot?startgroup')
             ],[
-                InlineKeyboardButton("❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ", url='https://t.me/SmartEdith_Bot'),
-                InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ", url='https://t.me/Tech_Shreyansh1')
+                InlineKeyboardButton("⚓ Uᴘᴅᴀᴛᴇꜱ ⚓", url='https://t.me/+NE3VMORHtoU3OWU1'),
+                InlineKeyboardButton("💥 Sᴜᴘᴘᴏʀᴛ 💥", url='https://t.me/+qYhaDTohl9I1YWY1')
             ]]
         )
     )
@@ -73,7 +73,7 @@ async def approve_new(client, m):
             await client.send_message(LOG_CHANNEL, LOG_TEXT.format(m.from_user.id, m.from_user.mention))
         await client.approve_chat_join_request(m.chat.id, m.from_user.id)
         try:
-            await client.send_message(m.from_user.id, "**Hello {}!\nWelcome To {}\n\n__Powered By : @Tech_Shreyansh29 __**".format(m.from_user.mention, m.chat.title))
+            await client.send_message(m.from_user.id, "**Hello {}!\nWelcome To {}\n\n__Powered By : @MazhavilMoviesLinks __**".format(m.from_user.mention, m.chat.title))
         except:
             pass
     except Exception as e:
