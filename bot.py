@@ -10,8 +10,8 @@ class Bot(Client):
          api_hash=API_HASH,
          bot_token=BOT_TOKEN,
          plugins=dict(root="plugins"),
-         workers=50,
-         sleep_threshold=10
+         workers=20,
+         sleep_threshold=200
         )
 
       
